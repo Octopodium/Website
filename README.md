@@ -9,13 +9,13 @@ Unique Mechanics: Control characters with specialized tools (Fork hooks & Giant 
 
 The Food Tower: Navigate levels filled with "monstrous" ingredients and magical recipes.
 
-##⚡ Tech Stack
+## ⚡ Tech Stack
 - HTML5
 - CSS3
 - Javascript
 - Integrated Font Awesome 6 (Brands & Solid)
 
-##🛠️ Future Roadmap
+## 🛠️ Future Roadmap
 [ ] Multi-Game Navigation: A dynamic menu to switch between different game landing pages.
 
 📬 Connect with Octo-Podium
