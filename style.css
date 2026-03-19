@@ -45,43 +45,89 @@ body{
     align-items: center;
     width: 100%;
     height: 500px;
-    background-color: cornflowerblue;
 }
 
 .video-background{
-
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/Full_art1.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: teal;
 }
 
 .acessos-botoes{
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
-    width: 20%;
-    height: 120px;
-    background-color: darkgoldenrod;
+    top: 280px;
+    width: 30%;
+    gap: 10px;
+    height: 220px;
 }
 
 .acessos-botoes a{
-    width: 60%;
-    height: 30px;
-    background-color: pink;
-    color: black;
+    display: flex;
+    width: 335px;
+    height: 80px;
+    gap: 10px;
+    padding-bottom: 5px;
+    background-image: url(Images/botao_base.png);
+    background-size: 260px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+    filter: hue-rotate(0deg);
+    transition: filter 0.3s ease-in-out; /*odiei isso, procurando outra forma de fazer (png branco)*/
+}
+
+.divisao-pai{
+    position: relative;
 }
 
 .divisao{
-    height: 20px;
+    display: block;
+    position: absolute;
     width: 100%;
-    background-color: aliceblue;
+    height: 20px;
+    bottom: -10px;
+    background-image: url('Images/Line1.png');
+    background-position: center;
+    pointer-events: none;
 }
 
+.about-the-game{
+    padding: 30px 100px 30px 100px;
+}
+
+
 .img-about-game{
-    height: 300px;
-    width: 80%;
-    background-color: crimson;
+    height: auto;
+    width: 90%;
+    background: radial-gradient(circle, #FF0062 0, #FFE6BE50 50%, transparent 57%);
+}
+
+.about-web{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 50px;
+}
+
+.about-web p{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    line-height: 1.6;
+    font-size: large;
 }
 
 .galeria{
@@ -93,4 +139,10 @@ body{
 .galeria-media-img{
     height: 200px;
     width: 400px;
+}
+
+/*HOVER EVENTS*/
+
+.acessos-botoes a:hover{
+    filter: hue-rotate(220deg);
 }
