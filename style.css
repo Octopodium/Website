@@ -13,13 +13,25 @@
     font-family: "Poppins";
 }
 
-header{
-    padding: 20px;
-    position: absolute;
-}
 
 body{
     background-color: black;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+header{
+    padding-left: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logo-container{
@@ -39,22 +51,69 @@ body{
     z-index: 2;
 }
 
+.logo-container:hover .fundo-logo{
+    filter: brightness(0) saturate(100%) invert(17%) sepia(96%) saturate(5000%) hue-rotate(320deg);
+}
+
+.options{
+    display: flex;
+    gap: 20px;
+    height: 100px;
+    width: 70%;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.3) 14%, rgba(0, 0, 0, 1) 100%);
+}
+
+.options a{
+    text-decoration: none;
+    position: relative;
+    font-size: large;
+    font-weight: 500;
+}
+
+.options a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--pink);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.options a:hover::after{
+    width: 100%;
+}
+
+/* HERO */
+
 .hero-container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 70vh;
+}
+
+.titulo_rangolithical{
+    width: 100px;
 }
 
 .video-background{
     width: 100%;
     height: 100%;
-    background-image: url(Images/Full_art1.png);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: teal;
+}
+
+.bg-video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
 }
 
 .acessos-botoes{
@@ -63,10 +122,9 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 280px;
+    top: 200px;
     width: 30%;
     gap: 10px;
-    height: 220px;
 }
 
 .acessos-botoes a{
@@ -85,9 +143,18 @@ body{
     text-decoration: none;
     font-size: x-large;
     font-weight: bold;
-    filter: hue-rotate(0deg);
-    transition: filter 0.3s ease-in-out; /*odiei isso, procurando outra forma de fazer (png branco)*/
 }
+
+.acessos-botoes a:hover{
+    transform: scale(1.05) rotate(-2deg);
+    filter: brightness(1.2) hue-rotate(-145deg);
+}
+
+.acessos-botoes a:hover::after{
+    opacity: 0.6;
+}
+
+/* DIVISOR */
 
 .divisao-pai{
     position: relative;
@@ -112,13 +179,14 @@ body{
 .img-about-game{
     height: auto;
     width: 90%;
-    background: radial-gradient(circle, #FF0062 0, #FFE6BE50 50%, transparent 57%);
+    filter: drop-shadow(0 0 20px rgba(255,0,98,0.5));
 }
 
 .about-web{
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 50px;
+    align-items: center;
 }
 
 .about-web p{
@@ -128,12 +196,22 @@ body{
     /*justify-content: center;*/
     line-height: 1.6;
     font-size: large;
+    /*ainda vou justificar o texto, calma juan*/
+}
+
+.media{
+    padding: 30px 100px 30px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .galeria{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 100px;
+    justify-content: center;
+    padding-bottom: 50px;
 }
 
 .galeria-media-img{
@@ -141,8 +219,25 @@ body{
     width: 400px;
 }
 
-/*HOVER EVENTS*/
 
-.acessos-botoes a:hover{
-    filter: hue-rotate(220deg);
+.presskit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 80px;
+    background-image: url(Images/botao_base.png);
+    background-size: 260px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+
+.presskit:hover{
+    transform: scale(1.05) rotate(-2deg);
+    filter: brightness(1.2) hue-rotate(-145deg);
 }
