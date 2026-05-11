@@ -95,7 +95,7 @@ nav{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 95vh;
 }
 
 .titulo_rangolithical{
@@ -113,7 +113,7 @@ nav{
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.4);
+    filter: brightness(0.6);
 }
 
 .acessos-botoes{
@@ -122,9 +122,9 @@ nav{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 200px;
+    top: 420px;
     width: 30%;
-    gap: 10px;
+    gap: 20px;
 }
 
 .acessos-botoes a{
@@ -137,7 +137,7 @@ nav{
     background-size: 260px;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
+    color: var(--beige);
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -215,8 +215,9 @@ nav{
 }
 
 .galeria-media-img{
-    height: 200px;
+    height: auto;
     width: 400px;
+    box-shadow: 0 0 20px rgba(255,0,98,0.5);
 }
 
 
@@ -240,4 +241,8 @@ nav{
 .presskit:hover{
     transform: scale(1.05) rotate(-2deg);
     filter: brightness(1.2) hue-rotate(-145deg);
+}
+
+.botoes-footer a{
+    text-decoration: none;
 }
