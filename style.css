@@ -41,6 +41,13 @@ nav{
     align-items: center;
 }
 
+.logo-jogo {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
 .fundo-logo{
     position: relative;
     z-index: 1;
@@ -92,49 +99,56 @@ nav{
 
 .hero-container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: 95vh;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .titulo_rangolithical{
     width: 100px;
 }
 
-.video-background{
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 
-.bg-video{
-    position: relative;
+.bg-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
     filter: brightness(0.6);
 }
 
-.acessos-botoes{
+.acessos-botoes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 420px;
-    width: 30%;
+    width: 100%; 
+    max-width: 500px;
     gap: 20px;
+    z-index: 2;
 }
 
 .acessos-botoes a{
     display: flex;
-    width: 335px;
+    width: 100%;
+    max-width: 335px;
     height: 80px;
     gap: 10px;
     padding-bottom: 5px;
     background-image: url(Images/botao_base.png);
-    background-size: 260px;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     color: var(--beige);
@@ -172,19 +186,23 @@ nav{
 }
 
 .about-the-game{
-    padding: 30px 100px 30px 100px;
+    /*padding: 30px 100px 30px 100px;*/
+    padding: 60px 5%;
 }
 
 
 .img-about-game{
     height: auto;
-    width: 90%;
+    width: 100%;
+    max-width: 550px;
+    justify-self: center;
     filter: drop-shadow(0 0 20px rgba(255,0,98,0.5));
 }
 
 .about-web{
     display: grid;
-    grid-template-columns: 50% 50%;
+    /*grid-template-columns: 50% 50%;*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
     align-items: center;
 }
@@ -200,23 +218,28 @@ nav{
 }
 
 .media{
-    padding: 30px 100px 30px 100px;
+    /*padding: 30px 100px 30px 100px;*/
+    padding: 60px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .galeria{
+    /*grid-template-columns: auto auto auto;*/
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 100px;
+    width: 100%;
+    max-width: 1200px;
     justify-content: center;
     padding-bottom: 50px;
 }
 
 .galeria-media-img{
     height: auto;
-    width: 400px;
+    width: 100%;
+    justify-self: center;
     box-shadow: 0 0 20px rgba(255,0,98,0.5);
 }
 
@@ -226,7 +249,8 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 100%;
+    max-width: 260px;
     height: 80px;
     background-image: url(Images/botao_base.png);
     background-size: 260px;
@@ -235,6 +259,13 @@ nav{
     text-decoration: none;
     font-size: x-large;
     font-weight: 700;
+}
+
+.media > img {
+    width: 100% !important;
+    max-width: 500px;
+    height: auto !important;
+    margin-bottom: 30px;
 }
 
 
