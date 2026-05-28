@@ -37,7 +37,7 @@
                     <i class="fa-brands fa-youtube fa-2x"></i>
                     Trailer
                 </a>
-                <a href="" class="wishlist">
+                <a onclick="abrirModal()" class="wishlist">
                     <i class="fa-brands fa-steam fa-2x"></i>
                     Wishlist
                 </a>
@@ -97,5 +97,23 @@
         </div>
         <span>C Octo-Podium Studio 2026</span>
     </footer>
+    <div id="avisoModal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <button class="close-btn" onclick="fecharModal()">X</button>
+            <p class="modal-text">COMING SOON!</p>
+        </div>
+    </div >
+
+    <script>
+        const modal = document.getElementById('avisoModal');
+
+        function abrirModal(){
+            modal.classList.remove('hidden');
+        }
+
+        function fecharModal(){
+            modal.classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
