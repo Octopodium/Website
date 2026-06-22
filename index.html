@@ -1,119 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Images/FinnIcon.png">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Octo-Podium Studio</title>
-</head>
-<body>
-    <div id="top" style="top: 0; width: 0; height: 0; left: 0;"></div>
-    <header>
-        <nav>
-            <a href="index.html" class="logo-container">
-                <img src="Images/Rectangle1.png" class="fundo-logo">
-                <img src="Images/octopodium_red_alt.png" class="topo-logo">
-            </a>
-            <div class="options">
-                <a href="index.html">Rangolithical</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-    </header>
-    <div class="container-full-wrap">
-        <div class="hero-container">
-            <div class="video-background">
-                <video autoplay muted loop playsinline class="bg-video">
-                    <source src="Images/GameplayBack.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="acessos-botoes">
-                <img src="Images/rangolithical_logo.png" alt="Rangolithical Logo" class="logo-jogo">
-                <a href="https://youtu.be/15g_zgWj2jw?si=f18RZnPFha-zic5q" target="_blank" class="trailer">
-                    <i class="fa-brands fa-youtube fa-2x"></i>
-                    Trailer
-                </a>
-                <a onclick="abrirModal()" class="wishlist">
-                    <i class="fa-brands fa-steam fa-2x"></i>
-                    Wishlist
-                </a>
-            </div>
-        </div>
-        <div class="divisao-pai"><div class="divisao"></div></div>
-        <section class="about-the-game">
-            <h1>About <h3 style="padding-bottom: 10px;">the game</h3></h1>
-            <div class="about-web">
-                <p>Rangolithical is a puzzle game where players will need to clear each and every room 
-                    of a magical food tower in order to obtain the enchanted SUPER LEGENDAY RECIPE. Control Finn, 
-                    with a fork hook, or Rita, with her giant pan, and solve a variety of puzzles through teamwork and coordenation!
-                    <br>
-                    <br>
-                    Collaboration is an essential tool in order to beat the trials and tribulations that await inside this 
-                    mysterious tower keep, where every piece of food has a mind of its own. Face fire spewing dragonfruit 
-                    turrets, onion beetles and many delicious monstrocities in this cooperative multiplayer experience for up to two players, either locally or online!</p>
-                <img src="Images/Full_art1.png" class="img-about-game">
-            </div>
-        </section>
-        <div class="divisao-pai"><div class="divisao"></div></div>
-        <section class="media">
-            <h1 style="padding-bottom: 30px;">Media</h1>
-            <div class="galeria">
-                <img src="Images/screenshot-1.png" class="galeria-media-img">
-                <img src="Images/screenshot-2.png" class="galeria-media-img">
-                <img src="Images/screenshot-3.png" class="galeria-media-img">
-                <img src="Images/screenshot-4.png" class="galeria-media-img">
-                <img src="Images/character_proto_concept_exploration.png" class="galeria-media-img">
-                <img src="Images/intro_boards.png" class="galeria-media-img">
-            </div>
-            <img src="Images/IMG_9686.PNG" style="width: 500px; height: auto;">
-            <a href="https://impress.games/press-kit/octo-podium/rangolithical" target="_blank" class="presskit">Press kit</a>
-        </section>
-        <div class="divisao-pai"><div class="divisao"></div></div>
-    </div>
-    <footer>
-        <div class="logo-footer">
-            <a href="index.html" class="logo-container">
-                <img src="Images/Rectangle1.png" class="fundo-logo">
-                <img src="Images/octopodium_red_alt.png" class="topo-logo">
-            </a>
-        </div>
-        <div class="botoes-footer">
-            <a href="" target="_blank">
-                <i class="fa-brands fa-steam fa-2x"></i>
-            </a>
-            <a href="https://www.youtube.com/@Octo-PodiumStudio" target="_blank">
-                <i class="fa-brands fa-youtube fa-2x"></i>
-            </a>
-            <a href="https://www.instagram.com/octopodiumstudio/" target="_blank">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-            </a>
-            <a href="https://bsky.app/profile/octopodiumstudio.bsky.social" target="_blank">
-                <i class="fa-brands fa-bluesky fa-2x"></i>
-            </a>
-        </div>
-        <span>&copy; Octo-Podium Studio 2026</span>
-    </footer>
-    <div id="avisoModal" class="modal-overlay hidden">
-        <div class="modal-box">
-            <button class="close-btn" onclick="fecharModal()">X</button>
-            <p class="modal-text">COMING SOON!</p>
-        </div>
-    </div >
-
-    <script>
-        const modal = document.getElementById('avisoModal');
-
-        function abrirModal(){
-            modal.classList.remove('hidden');
-        }
-
-        function fecharModal(){
-            modal.classList.add('hidden');
-        }
-    </script>
-</body>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
