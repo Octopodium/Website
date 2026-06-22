@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const base = import.meta.env.BASE_URL
+</script>
+
 <template>
   <div class="container-full-wrap">
     <section class="about-us">
-      <img src="/Images/balaoConversa.png" class="img-about-game" style="width: 150px" alt="Balao Conversa">
+      <img :src="base + 'Images/balaoConversa.png'" class="img-about-game" style="width: 150px" alt="Balao Conversa">
       <h1>Want to contact us? <h3 style="padding-bottom: 10px;"></h3></h1>
       <div class="about-web">
         <p>

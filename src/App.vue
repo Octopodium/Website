@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+const base = import.meta.env.BASE_URL
 const isMobileMenuOpen = ref(false)
 
 function toggleMobileMenu() {
@@ -24,8 +25,8 @@ function toggleModal(visible: boolean) {
     <header>
       <nav>
         <router-link to="/" class="logo-container header-logo">
-          <img src="/Images/Rectangle1.png" class="fundo-logo" alt="Fundo Logo">
-          <img src="/Images/octopodium_red_alt.png" class="topo-logo" alt="Topo Logo">
+          <img :src="base + 'Images/Rectangle1.png'" class="fundo-logo" alt="Fundo Logo">
+          <img :src="base + 'Images/octopodium_red_alt.png'" class="topo-logo" alt="Topo Logo">
         </router-link>
         <div class="options">
           <router-link to="/">Rangolithical</router-link>
@@ -33,7 +34,7 @@ function toggleModal(visible: boolean) {
           <router-link to="/contact">Contact</router-link>
         </div>
         <button type="button" class="hamburger-button" @click="toggleMobileMenu" aria-label="Open menu">
-          <img src="/Images/hamMenu.png" alt="Menu" />
+          <img :src="base + 'Images/hamMenu.png'" alt="Menu" />
         </button>
         <div class="mobile-menu" :class="{ open: isMobileMenuOpen }">
           <button type="button" class="close-menu" @click="closeMobileMenu" aria-label="Close menu">×</button>
@@ -55,8 +56,8 @@ function toggleModal(visible: boolean) {
     <footer>
       <div class="logo-footer">
         <router-link to="/" class="logo-container footer-logo">
-          <img src="/Images/Rectangle1.png" class="fundo-logo" alt="Fundo Logo">
-          <img src="/Images/octopodium_red_alt.png" class="topo-logo" alt="Topo Logo">
+          <img :src="base + 'Images/Rectangle1.png'" class="fundo-logo" alt="Fundo Logo">
+          <img :src="base + 'Images/octopodium_red_alt.png'" class="topo-logo" alt="Topo Logo">
         </router-link>
       </div>
       <div class="botoes-footer">

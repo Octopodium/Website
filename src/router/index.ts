@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 import GameView from '../views/GameView.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -6,19 +6,19 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Game',
     component: GameView,
-    meta: { icon: '/Images/FinnIcon.png' }
+    meta: { icon: import.meta.env.BASE_URL + 'Images/FinnIcon.png' }
   },
   {
     path: '/about',
     name: 'About',
     component: () => import('../views/AboutView.vue'),
-    meta: { icon: '/Images/RitaIcon.png' }
+    meta: { icon: import.meta.env.BASE_URL + 'Images/RitaIcon.png' }
   },
   {
     path: '/contact',
     name: 'Contact',
     component: () => import('../views/ContactView.vue'),
-    meta: { icon: '/Images/HeartIcon.png' }
+    meta: { icon: import.meta.env.BASE_URL + 'Images/HeartIcon.png' }
   },
   {
     path: '/:pathMatch(.*)*',
@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes
 })
 

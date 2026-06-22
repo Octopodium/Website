@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const base = import.meta.env.BASE_URL
+</script>
+
 <template>
   <div class="container-full-wrap">
     <section class="about-us">
-      <img src="/Images/us.jpeg" class="img-about-us" alt="Octo-Guys">
+      <img :src="base + 'Images/us.jpeg'" class="img-about-us" alt="Octo-Guys">
       <h1>Meet the Octo-Guys! <h3 style="padding-bottom: 10px;"></h3></h1>
       <div class="about-web">
         <p>
