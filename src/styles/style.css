@@ -358,7 +358,13 @@ footer span {
     }
 
     .logo-container {
-        max-width: 180px;
+        max-width: 140px;
+        width: 100%;
+    }
+
+    .logo-container img {
+        width: 100%;
+        height: auto;
     }
 
     .options {
@@ -374,6 +380,16 @@ footer span {
         right: 0;
         margin: 0;
         padding: 0;
+    }
+
+    .hamburger-button img {
+        width: 70px;
+        height: auto;
+    }
+
+    .about-us .img-about-us {
+        width: 90%;
+        max-width: none;
     }
 }
 
